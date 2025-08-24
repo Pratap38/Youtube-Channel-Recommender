@@ -1,6 +1,6 @@
 # 🎬 YouTube Channel Recommender – Data Science Project
 
-![YouTube Banner](https://cdn-icons-png.flaticon.com/512/1384/1384060.png)
+
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
