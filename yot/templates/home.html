@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+    <title>YouTube Channel Recommender</title>
+   
+</head>
+<body>
+    <!-- 3D Background -->
+    <div class="bg-3d">
+        <div class="bg-cube">
+            <div class="bg-side side-front"></div>
+            <div class="bg-side side-back"></div>
+            <div class="bg-side side-top"></div>
+            <div class="bg-side side-bottom"></div>
+            <div class="bg-side side-left"></div>
+            <div class="bg-side side-right"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>📺 YouTube Channel Recommender</h1>
+        <form method="get">
+            <input type="text" name="query" placeholder="Enter topic or query" value="{{ query }}">
+            <button type="submit">Search</button>
+        </form>
+
+        {% if recommendations %}
+            <h2>Top Recommendations for "{{ query }}"</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Description</th>
+                        <th>Subscribers</th>
+                        <th>Views</th>
+                        <th>Videos</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rec in recommendations %}
+                    <tr>
+                        <td>{{ rec.channel }}</td>
+                        <td>{{ rec.description }}</td>
+                        <td>{{ rec.subscribers }}</td>
+                        <td>{{ rec.views }}</td>
+                        <td>{{ rec.videos }}</td>
+                        <td>{{ rec.score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% elif query %}
+            <p>No recommendations found for "{{ query }}".</p>
+        {% endif %}
+    </div>
+
+    <script>
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to change background color with 3D effect
+        function changeBackgroundColor() {
+            const sides = document.querySelectorAll('.bg-side');
+            sides.forEach(side => {
+                const color1 = getRandomColor();
+                const color2 = getRandomColor();
+                side.style.background = `linear-gradient(45deg, ${color1}, ${color2})`;
+            });
+        }
+
+        // Change background color every second
+        setInterval(changeBackgroundColor, 1000);
+
+        // Change background color on mouse click
+        document.addEventListener('click', changeBackgroundColor);
+    </script>
+</body>
+</html>
