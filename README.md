@@ -66,12 +66,20 @@ A **NLP-based recommendation system** that suggests the most relevant YouTube ch
 - **Compute Cosine Similarity:** Compare query vs all channels  
 - **Return Top-K Results:** Sorted by similarity score  
 
-**Sample Output:**
+📸 Screenshots / Demo
 
-| Channel | Description | Subscribers | Views | Videos | Score |
-|---------|------------|------------|-------|-------|-------|
-| CodeWithHarry | Learn Python, Java, ML... | 2M | 100M | 300 | 0.89 |
-| freeCodeCamp | Programming tutorials... | 4M | 500M | 150 | 0.85 |
+Visualize how the YouTube Channel Recommender works in action:
+
+Homepage / Query Input
+
+The main interface where users enter a topic or query:
+
+<img width="900" alt="Homepage Query Input 1" src="https://github.com/user-attachments/assets/316cbf4e-f19b-4a4d-b0fa-14345dbc5cd6" /> <img width="900" alt="Homepage Query Input 2" src="https://github.com/user-attachments/assets/04069ae6-d97e-4199-afb1-60051d25e27d" />
+Recommendations Table
+
+Shows the top channels based on your query, including subscribers, views, and other metrics:
+
+<img width="900" alt="Recommendations Table" src="https://via.placeholder.com/900x400?text=Recommendations+Table" />
 
 ---
 
@@ -79,7 +87,8 @@ A **NLP-based recommendation system** that suggests the most relevant YouTube ch
 - **Python** – Logic & preprocessing  
 - **Pandas** – Data handling  
 - **Scikit-learn** – TF-IDF & cosine similarity  
-- **Pickle** – Save/load trained model  
+- **Pickle** – Save/load trained model
+- Django-web implementation
 
 ---
 
@@ -88,6 +97,7 @@ A **NLP-based recommendation system** that suggests the most relevant YouTube ch
 - Handles **1M+ channels efficiently**  
 - Easily extendable for **personalized suggestions**  
 - Ready for **integration into web apps or dashboards**  
+
 
 ---
 
