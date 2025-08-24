@@ -79,7 +79,7 @@ Recommendations Table
 
 Shows the top channels based on your query, including subscribers, views, and other metrics:
 
-<img width="900" alt="Recommendations Table" src="https://via.placeholder.com/900x400?text=Recommendations+Table" />
+
 
 ---
 
